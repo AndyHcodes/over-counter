@@ -13,21 +13,23 @@ const Counter = () => {
     }
   };
   return (
-    <div>
+    <div className="counter">
       <h2>Balls</h2>
-      <button
-        onClick={() => setBalls(balls - 1)}
-        className="plusMinus"
-        type="submit"
-      >
-        Minus
-      </button>
-      {balls}
-      <button onClick={incOverCounter} className="plusMinus" type="submit">
-        Plus
-      </button>
+      <section className="balls">
+        <button
+          onClick={() => setBalls(balls - 1)}
+          className="plusMinus"
+          type="submit"
+        >
+          -
+        </button>
+        <div className="totals">{balls}</div>
+        <button onClick={incOverCounter} className="plusMinus" type="submit">
+          +
+        </button>
+      </section>
       <h2>Overs</h2>
-      {overs}
+      <div className="totals">{overs}</div>
     </div>
   );
 };
